@@ -1,4 +1,5 @@
 import AnnouncementsIndex from "./Components/AnnouncementsIndex";
+import Slider from "./Components/Slider";
 import TopBarIndex from "./Components/TopBarIndex";
 
 export default function HomePageIndex() {
@@ -6,6 +7,7 @@ export default function HomePageIndex() {
     <div>
       <TopBarIndex />
       <AnnouncementsIndex />
+      <Slider />
     </div>
   );
 }

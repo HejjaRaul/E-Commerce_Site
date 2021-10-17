@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+//<---------------------------------------Start of CSS - styling------------------------------------------------>
+
 const Container = styled.div`
   height: 30px;
   background-color: #ff6962;
@@ -12,6 +14,12 @@ const Container = styled.div`
   font-weight: 500px;
 `;
 
+//<---------------------------------------End of CSS - styling------------------------------------------------>
+
+//<---------------------------------------Start of HTML - coding---------------------------------------------->
+
 export default function AnnouncementsIndex() {
-  return <Container>Super Deal! Free Shipping at Orders Over 40€</Container>;
+  return <Container>Super Deal! Free Shipping on Orders Over 40€</Container>;
 }
+
+//<---------------------------------------End of HTML - coding---------------------------------------------->
