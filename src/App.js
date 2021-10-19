@@ -1,8 +1,8 @@
+import HomePageIndex from "./Pages/HomePage/HomePageIndex";
+
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <HomePageIndex/>
   );
 }
 
