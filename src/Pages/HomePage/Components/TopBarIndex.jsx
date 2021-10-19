@@ -24,10 +24,11 @@ const Left = styled.div`
 const Languages = styled.span`
   font-size: 20px;
   cursor: pointer;
+  font-weight: bold;
 `;
 
 const SearchContainer = styled.div`
-  border: 1px solid gray;
+  border: 1.5px solid gray;
   display: flex;
   align-items: center;
   margin-left: 25px;
@@ -61,6 +62,7 @@ const MenuItem = styled.div`
   cursor: pointer;
   margin-left: 25px;
   color: #990f02;
+  font-weight: 600;
 `;
 
 //<---------------------------------------End of CSS - styling------------------------------------------------>

@@ -1,25 +1,27 @@
-import React from "react";
 import styled from "styled-components";
+import { categories } from "./Categories";
+import CategoryItem from "./CategoryItemIndex";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
 const Container = styled.div`
-  height: 30px;
-  background-color: #ff6962;
-  color: #ffffff;
   display: flex;
-  align-text: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 500px;
+  padding: 20px;
+  justify-content: space-between;
 `;
 
 //<---------------------------------------End of CSS - styling------------------------------------------------>
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function AnnouncementsIndex() {
-  return <Container>Super Deal! Free Shipping for Orders Over 40€</Container>;
+export default function Categories() {
+  return (
+    <Container>
+      {categories.map((item) => (
+        <CategoryItem item={item} />
+      ))}
+    </Container>
+  );
 }
 
 //<---------------------------------------End of HTML - coding---------------------------------------------->
