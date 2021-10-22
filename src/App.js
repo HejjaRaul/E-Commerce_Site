@@ -1,9 +1,7 @@
-import HomePageIndex from "./Pages/HomePage/HomePageIndex";
+import HomePageIndex from "./Pages/Home/HomePageIndex";
 
 function App() {
-  return (
-    <HomePageIndex/>
-  );
+  return <HomePageIndex />;
 }
 
 export default App;

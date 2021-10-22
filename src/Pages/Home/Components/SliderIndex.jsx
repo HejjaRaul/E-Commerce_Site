@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { sliderItems } from "./SliderHomePageData";
+import { sliderItems } from "./SliderData";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 

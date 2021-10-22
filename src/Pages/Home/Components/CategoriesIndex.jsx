@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { categories } from "./Categories";
+import { categories } from "./CategoriesData";
 import CategoryItem from "./CategoryItemIndex";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
