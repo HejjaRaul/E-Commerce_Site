@@ -108,7 +108,7 @@ export default function Slider() {
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
-          <Slide bg={item.backgroundColor}>
+          <Slide bg={item.backgroundColor} key={item.id}>
             <ImagineContainer>
               <Image src={item.image} />
             </ImagineContainer>

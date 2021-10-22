@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { categories } from "./CategoriesData";
-import CategoryItem from "./CategoryItemIndex";
+import ProductItemIndex from "./ProductItemIndex";
+import { popularProducts } from "./ProductsListData";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
 const Container = styled.div`
-  display: flex;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
@@ -14,11 +15,11 @@ const Container = styled.div`
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function Categories() {
+export default function ProductsListIndex() {
   return (
     <Container>
-      {categories.map((item) => (
-        <CategoryItem item={item} key={item.id} />
+      {popularProducts.map((item) => (
+        <ProductItemIndex item={item} key={item.id} />
       ))}
     </Container>
   );
