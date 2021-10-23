@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProductItemIndex from "./ProductItemIndex";
+import PopularProductItemIndex from "./PopularProductItemIndex";
 import { popularProducts } from "./ProductsListData";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
@@ -19,7 +19,7 @@ export default function ProductsListIndex() {
   return (
     <Container>
       {popularProducts.map((item) => (
-        <ProductItemIndex item={item} key={item.id} />
+        <PopularProductItemIndex item={item} key={item.id} />
       ))}
     </Container>
   );

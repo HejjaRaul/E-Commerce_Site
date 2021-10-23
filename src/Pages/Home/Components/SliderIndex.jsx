@@ -115,7 +115,7 @@ export default function Slider() {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
-              <Button>Shop Now</Button>
+              <Button>Show Now</Button>
             </InfoContainer>
           </Slide>
         ))}
