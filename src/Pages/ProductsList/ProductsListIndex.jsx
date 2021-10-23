@@ -3,6 +3,8 @@ import AnnouncementsIndex from "./Components/AnnouncementsIndex";
 import FilterIndex from "./Components/FilterIndex";
 import TopBarIndex from "./Components/TopBarIndex";
 import ProductListIndex from "./Components/ProductListIndex";
+import NewsletterIndex from "./Components/NewsletterIndex";
+import FooterIndex from "./Components/FooterIndex";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -26,6 +28,8 @@ export default function ProductsListIndex() {
       <Title>Dresses</Title>
       <FilterIndex />
       <ProductListIndex />
+      <NewsletterIndex />
+      <FooterIndex />
     </Container>
   );
 }
