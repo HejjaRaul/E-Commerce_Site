@@ -62,7 +62,7 @@ const Icon = styled.div`
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function PopularProductItemIndex({ item }) {
+export default function ProductItemIndex({ item }) {
   return (
     <Container>
       <Image src={item.image} />

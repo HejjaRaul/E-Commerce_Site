@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import PopularProductItemIndex from "./PopularProductItemIndex";
-import { popularProducts } from "./PopularProductsListData";
+import ProductItemIndex from "./ProductItemIndex";
+import { Products } from "./ProductListData";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -18,8 +18,8 @@ const Container = styled.div`
 export default function ProductsListIndex() {
   return (
     <Container>
-      {popularProducts.map((item) => (
-        <PopularProductItemIndex item={item} key={item.id} />
+      {Products.map((item) => (
+        <ProductItemIndex item={item} key={item.id} />
       ))}
     </Container>
   );
