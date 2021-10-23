@@ -3,6 +3,7 @@ import CategoriesIndex from "./Components/CategoriesIndex";
 import SliderIndex from "./Components/SliderIndex";
 import TopBarIndex from "./Components/TopBarIndex";
 import ProductsListIndex from "./Components/ProductsListIndex";
+import NewsletterIndex from "./Components/NewsletterIndex";
 
 export default function HomePageIndex() {
   return (
@@ -12,6 +13,7 @@ export default function HomePageIndex() {
       <SliderIndex />
       <CategoriesIndex />
       <ProductsListIndex />
+      <NewsletterIndex />
     </div>
   );
 }
