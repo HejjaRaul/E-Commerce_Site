@@ -20,7 +20,7 @@ const Title = styled.h1`
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function ProductsListIndex() {
+export default function ProductsListPageIndex() {
   return (
     <Container>
       <TopBarIndex />
