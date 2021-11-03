@@ -1,3 +1,4 @@
+import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import AnnouncementsIndex from "../ProductsList/Components/AnnouncementsIndex";
 import TopBarIndex from "../ProductsList/Components/TopBarIndex";
@@ -31,18 +32,19 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  margin: 20px 0px;
+  margin: 30px 0px;
   font-size: 20px;
 `;
 
 const Price = styled.span`
+  margin-top: 20px;
   font-weight: 100;
   font-size: 40px;
 `;
 
 const FilterContainer = styled.div`
   width: 40%;
-  margin: 30px 0px;
+  margin: 40px 0px;
   display: flex;
   justify-content: space-between;
 `;
@@ -72,6 +74,42 @@ const FilterSize = styled.select`
 `;
 
 const FilterSizeOption = styled.option``;
+
+const AddContainer = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const AmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+`;
+
+const Amount = styled.span`
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 8px;
+`;
+
+const Button = styled.button`
+  padding: 15px;
+  border: 2px solid teal;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+
+  &hover {
+    background-color: lightblue;
+  }
+`;
 
 export default function ProductPageIndex() {
   return (
@@ -108,6 +146,14 @@ export default function ProductPageIndex() {
               </FilterSize>
             </Filter>
           </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove />
+              <Amount>1</Amount>
+              <Add />
+            </AmountContainer>
+            <Button>ADD TO CART</Button>
+          </AddContainer>
         </InfoContainer>
       </Wrapper>
     </Container>
