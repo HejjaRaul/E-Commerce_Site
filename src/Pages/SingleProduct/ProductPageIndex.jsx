@@ -1,6 +1,8 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import AnnouncementsIndex from "../ProductsList/Components/AnnouncementsIndex";
+import FooterIndex from "../ProductsList/Components/FooterIndex";
+import NewsletterIndex from "../ProductsList/Components/NewsletterIndex";
 import TopBarIndex from "../ProductsList/Components/TopBarIndex";
 
 const Container = styled.div`
@@ -156,6 +158,8 @@ export default function ProductPageIndex() {
           </AddContainer>
         </InfoContainer>
       </Wrapper>
+      <NewsletterIndex />
+      <FooterIndex />
     </Container>
   );
 }
