@@ -5,6 +5,8 @@ import FooterIndex from "../ProductsList/Components/FooterIndex";
 import NewsletterIndex from "../ProductsList/Components/NewsletterIndex";
 import TopBarIndex from "../ProductsList/Components/TopBarIndex";
 
+//<---------------------------------------Start of CSS - styling------------------------------------------------>
+
 const Container = styled.div`
   /* ... */
 `;
@@ -113,6 +115,10 @@ const Button = styled.button`
   }
 `;
 
+//<---------------------------------------End of CSS - styling------------------------------------------------>
+
+//<---------------------------------------Start of HTML - coding---------------------------------------------->
+
 export default function ProductPageIndex() {
   return (
     <Container>
@@ -163,3 +169,5 @@ export default function ProductPageIndex() {
     </Container>
   );
 }
+
+//<---------------------------------------End of HTML - coding----------------------------------------------->
