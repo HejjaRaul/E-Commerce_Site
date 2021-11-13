@@ -1,8 +1,9 @@
 import HomePageIndex from "./Pages/Home/HomePageIndex";
-import ProductsListIndex from "./Pages/ProductsList/ProductsListIndex";
+import ProductsListPageIndex from "./Pages/ProductsList/ProductsListPageIndex";
+import ProductPageIndex from "./Pages/SingleProduct/ProductPageIndex";
 
 function App() {
-  return <ProductsListIndex />;
+  return <ProductPageIndex />;
 }
 
 export default App;
