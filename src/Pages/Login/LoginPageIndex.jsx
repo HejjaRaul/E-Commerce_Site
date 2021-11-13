@@ -54,7 +54,7 @@ const Link = styled.a`
   cursor: pointer;
 `;
 
-export default function LoginIndex() {
+export default function LoginPageIndex() {
   return (
     <Container>
       <Wrapper>

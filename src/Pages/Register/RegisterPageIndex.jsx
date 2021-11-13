@@ -58,7 +58,7 @@ const Button = styled.button`
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function RegisterIndex() {
+export default function RegisterPageIndex() {
   return (
     <Container>
       <Wrapper>

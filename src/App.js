@@ -1,11 +1,12 @@
 import HomePageIndex from "./Pages/Home/HomePageIndex";
-import LoginIndex from "./Pages/Login/LoginIndex";
+import LoginPageIndex from "./Pages/Login/LoginPageIndex";
 import ProductsListPageIndex from "./Pages/ProductsList/ProductsListPageIndex";
-import RegisterIndex from "./Pages/Register/RegisterIndex";
+import RegisterPageIndex from "./Pages/Register/RegisterPageIndex";
+import ShoppingCartPageIndex from "./Pages/ShoppingCart/ShoppingCartPageIndex";
 import ProductPageIndex from "./Pages/SingleProduct/ProductPageIndex";
 
 function App() {
-  return <LoginIndex />;
+  return <ShoppingCartPageIndex />;
 }
 
 export default App;
