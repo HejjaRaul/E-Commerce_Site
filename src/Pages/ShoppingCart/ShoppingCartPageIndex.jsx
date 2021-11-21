@@ -116,6 +116,41 @@ const Hr = styled.hr`
 
 const Summary = styled.div`
   flex: 1;
+  padding: 20px;
+  height: 32vh;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: rgba(104, 180, 243, 0.26);
+`
+
+const SummaryTitle = styled.h1`
+  display: flex;
+  font-weight: 300;
+  font-size: 30px;
+  justify-content: center;
+`
+const SummaryItem = styled.div`
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  margin: 30px 0;
+  font-weight: ${props => props.type === "total" && "500"};
+  font-size: ${props => props.type === "total" && "24px"};
+`
+const SummaryItemText = styled.span``
+const SummaryItemPrice = styled.span``
+const SummaryHr = styled.hr`
+  background-color: #000000;
+  border: none;
+  height: 1px;
+`
+const SummaryButton = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
 `
 
 //<---------------------------------------End of CSS - styling------------------------------------------------>
@@ -181,7 +216,23 @@ export default function ShoppingCartPageIndex() {
                             </PriceDetail>
                         </Product>
                     </Info>
-                    <Summary>summary</Summary>
+                    <Summary>
+                        <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                        <SummaryItem>
+                            <SummaryItemText>Subtotal</SummaryItemText>
+                            <SummaryItemPrice>60 €</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryItem>
+                            <SummaryItemText>Shipping Cost</SummaryItemText>
+                            <SummaryItemPrice>5 €</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryHr/>
+                        <SummaryItem type="total">
+                            <SummaryItemText>Total</SummaryItemText>
+                            <SummaryItemPrice>65 €</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryButton>CHECKOUT NOW</SummaryButton>
+                    </Summary>
                 </Bottom>
             </Wrapper>
         </Container>
