@@ -36,13 +36,13 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  margin: 20px 10px 10px 0px;
+  margin: 20px 10px 10px 0;
   padding: 10px;
 `;
 
 const Agreement = styled.span`
   font-size: 18px;
-  margin: 20px 0px;
+  margin: 20px 0;
 `;
 
 const Button = styled.button`

@@ -59,7 +59,6 @@ const Image = styled.img`
   height: 80%;
   margin-left: 80px;
   margin-top: 20px;
-  border-radius: 1 solid;
 `;
 
 const InfoContainer = styled.div`
@@ -72,7 +71,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  margin: 50px 0px;
+  margin: 50px 0;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;

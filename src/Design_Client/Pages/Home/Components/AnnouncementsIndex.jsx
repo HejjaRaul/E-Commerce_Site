@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-weight: 500px;
+  font-weight: 500;
 `;
 
 //<---------------------------------------End of CSS - styling------------------------------------------------>
