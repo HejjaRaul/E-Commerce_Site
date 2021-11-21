@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import AnnouncementsIndex from "./Components/AnnouncementsIndex";
 import TopBarIndex from "./Components/TopBarIndex";
+import {Add, Remove} from "@mui/icons-material";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -47,9 +48,12 @@ const Bottom = styled.div`
 
 const Info = styled.div`
   flex: 3;
+  margin-top: 20px;
+  border: 2px #e72e61 ridge;
 `
 
 const Product = styled.div`
+  margin: 20px 10px;
   display: flex;
   justify-content: space-between;
 `
@@ -84,8 +88,31 @@ const ProductSize = styled.span`
 `
 const PriceDetail = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
+const ProductAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+`
+const ProductAmount = styled.div`
+  font-size: 24px;
+  margin: 5px;
+`
+const ProductPrice = styled.div`
+  font-size: 25px;
+  font-weight: 300;
+`
+
+const Hr = styled.hr`
+  background-color: #e72e61;
+  border: none;
+  height: 1px;
+`
 
 const Summary = styled.div`
   flex: 1;
@@ -123,7 +150,35 @@ export default function ShoppingCartPageIndex() {
                                     <ProductSize><b>Size:</b> M</ProductSize>
                                 </Details>
                             </ProductDetail>
-                            <PriceDetail>price</PriceDetail>
+                            <PriceDetail>
+                                <ProductAmountContainer>
+                                    <Remove/>
+                                    <ProductAmount>2</ProductAmount>
+                                    <Add/>
+                                </ProductAmountContainer>
+                                <ProductPrice>30 €</ProductPrice>
+                            </PriceDetail>
+                        </Product>
+                        <Hr/>
+                        <Product>
+                            <ProductDetail>
+                                <Image
+                                    src="https://i.pinimg.com/originals/35/1c/76/351c76792125bf3dd0820bcf5828e9c0.jpg"/>
+                                <Details>
+                                    <ProductName><b>Product:</b> BLACK JEANS</ProductName>
+                                    <ProductId><b>ID:</b> 9042152</ProductId>
+                                    <ProductColor color="black"/>
+                                    <ProductSize><b>Size:</b> M</ProductSize>
+                                </Details>
+                            </ProductDetail>
+                            <PriceDetail>
+                                <ProductAmountContainer>
+                                    <Remove/>
+                                    <ProductAmount>2</ProductAmount>
+                                    <Add/>
+                                </ProductAmountContainer>
+                                <ProductPrice>30 €</ProductPrice>
+                            </PriceDetail>
                         </Product>
                     </Info>
                     <Summary>summary</Summary>
