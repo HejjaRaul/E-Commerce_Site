@@ -2,6 +2,7 @@ import styled from "styled-components";
 import AnnouncementsIndex from "./Components/AnnouncementsIndex";
 import TopBarIndex from "./Components/TopBarIndex";
 import {Add, Remove} from "@mui/icons-material";
+import FooterIndex from "./Components/FooterIndex";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -235,6 +236,7 @@ export default function ShoppingCartPageIndex() {
                     </Summary>
                 </Bottom>
             </Wrapper>
+            <FooterIndex/>
         </Container>
     );
 }
