@@ -6,7 +6,7 @@ import ShoppingCartPageIndex from "./Pages/ShoppingCart/ShoppingCartPageIndex";
 import ProductPageIndex from "./Pages/SingleProduct/ProductPageIndex";
 
 function App() {
-    return <HomePageIndex/>;
+    return <ShoppingCartPageIndex/>;
 }
 
 export default App;
