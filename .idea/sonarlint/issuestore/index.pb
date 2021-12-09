@@ -23,8 +23,6 @@ o
 ?src/Design_Client/Pages/ShoppingCart/Components/FooterIndex.jsx,0\c\0c2e74a54e7b07d1c38babe9f3285e838793a750
 ^
 .src/Design_Client/Pages/Home/HomePageIndex.jsx,1\5\15c621c84e7d750e58075f74dcbe862ffca7f826
-`
-0src/Design_Client/Pages/Login/LoginPageIndex.jsx,7\5\75bc18bb76e923a1a1bc89a1fdda8920350865ee
 k
 ;src/Design_Client/Pages/Home/Components/NewsletterIndex.jsx,1\d\1d08d9d841829da3cbc0ec40fa693c80d25bee3a
 s
@@ -33,8 +31,6 @@ s
 Csrc/Design_Client/Pages/Home/Components/PopularProductItemIndex.jsx,b\6\b651e70f75e25fdd2fa7c1b97db5cef5259d02f8
 r
 Bsrc/Design_Client/Pages/Home/Components/PopularProductsListData.js,0\c\0c27095b724f7177d65675f4f01763750f7ce6c1
-t
-Dsrc/Design_Client/Pages/Home/Components/PopularProductsListIndex.jsx,b\b\bba1683f96d8aa2094339b2891a65ecad05d5257
 t
 Dsrc/Design_Client/Pages/ProductsList/Components/ProductItemIndex.jsx,1\3\138504e8bb15277c0aae6609dfebf9a5b8382817
 r
@@ -63,8 +59,3 @@ o
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 H
 src/Design_Client/App.js,1\4\1443b3b35a4f150bdb5e3375840120cf098dd086
-4
-.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
