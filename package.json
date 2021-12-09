@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "webidl-conversions": "^7.0.0"
   }
 }

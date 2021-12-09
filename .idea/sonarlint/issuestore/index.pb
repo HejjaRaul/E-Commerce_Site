@@ -1,6 +1,4 @@
 
-\
-,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 n
@@ -61,3 +59,12 @@ o
 ?src/Design_Client/Pages/ProductsList/Components/TopBarIndex.jsx,7\e\7e61706bb99023e6f7fbc8cf657144215e646a74
 o
 ?src/Design_Client/Pages/ShoppingCart/Components/TopBarIndex.jsx,2\3\236f30104240700d86cddff538e49ad8078c011d
+<
+src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
+H
+src/Design_Client/App.js,1\4\1443b3b35a4f150bdb5e3375840120cf098dd086
+4
+.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
