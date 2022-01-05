@@ -3,6 +3,7 @@ const CryptoJS = require("crypto-js");
 const router = require("express").Router();
 const UserModel = require("../Models/UserModel");
 
+//UPDATE
 
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     if (req.body.password) {

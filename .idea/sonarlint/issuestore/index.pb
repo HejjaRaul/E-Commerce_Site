@@ -67,12 +67,8 @@ L
 src/API/Models/OrderModel.js,e\3\e3fe8b9e6ce6342cf1576e133ff9c5882173f480
 L
 src/API/Routes/OrderRoute.js,8\6\86fc3fcfead00e6cdaa530f272ed523ec9dd2937
-N
-src/API/Models/ProductModel.js,5\1\51be23996e6fd5e97107aeb551d3c42f08202b07
 K
 src/API/Models/UserModel.js,3\6\3669af3740da6b49672f94227cac697ae43068a9
-N
-src/API/Routes/ProductRoute.js,c\5\c51b328dafa9d8df35562e90409596aeb5c5f6e4
 `
 0src/Design_Client/Pages/Login/LoginPageIndex.jsx,7\5\75bc18bb76e923a1a1bc89a1fdda8920350865ee
 t
