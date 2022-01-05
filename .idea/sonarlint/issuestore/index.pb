@@ -63,8 +63,6 @@ K
 src/API/Models/CartModel.js,5\9\59eb5f4ab77d2df8514248bda9e0110794f9d67b
 L
 src/API/Models/OrderModel.js,e\3\e3fe8b9e6ce6342cf1576e133ff9c5882173f480
-L
-src/API/Routes/OrderRoute.js,8\6\86fc3fcfead00e6cdaa530f272ed523ec9dd2937
 K
 src/API/Models/UserModel.js,3\6\3669af3740da6b49672f94227cac697ae43068a9
 `

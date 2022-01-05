@@ -29,7 +29,7 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //GET USER
 
@@ -41,7 +41,7 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //GET ALL USERS
 
@@ -53,7 +53,7 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //GET USER STATS
 
@@ -80,6 +80,6 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 module.exports = router;

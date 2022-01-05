@@ -37,7 +37,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //GET PRODUCT
 
@@ -48,7 +48,7 @@ router.get("/find/:id", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //GET ALL PRODUCTS
 
@@ -73,5 +73,6 @@ router.get("/", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
 module.exports = router;
