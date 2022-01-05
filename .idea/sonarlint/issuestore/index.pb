@@ -61,8 +61,6 @@ H
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 K
 src/API/Models/CartModel.js,5\9\59eb5f4ab77d2df8514248bda9e0110794f9d67b
-K
-src/API/Routes/CartRoute.js,c\d\cd133aaee05607cfc9496d155802698eb737fc9f
 L
 src/API/Models/OrderModel.js,e\3\e3fe8b9e6ce6342cf1576e133ff9c5882173f480
 L
