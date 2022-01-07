@@ -61,8 +61,6 @@ H
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 K
 src/API/Models/CartModel.js,5\9\59eb5f4ab77d2df8514248bda9e0110794f9d67b
-L
-src/API/Models/OrderModel.js,e\3\e3fe8b9e6ce6342cf1576e133ff9c5882173f480
 K
 src/API/Models/UserModel.js,3\6\3669af3740da6b49672f94227cac697ae43068a9
 `
@@ -76,3 +74,11 @@ Dsrc/Design_Client/Pages/Home/Components/PopularProductsListIndex.jsx,b\b\bba16
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
+<
+src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+U
+%src/API/Routes/AuthenticationRoute.js,b\0\b046908d22eb2ec323f8aec4ae8ea8502abf0f42
+N
+src/API/Models/ProductModel.js,5\1\51be23996e6fd5e97107aeb551d3c42f08202b07
