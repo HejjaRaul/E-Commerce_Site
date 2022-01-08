@@ -60,7 +60,7 @@ export default function ProductsListPageIndex() {
         <Container>
             <TopBarIndex/>
             <AnnouncementsIndex/>
-            <Title>Dresses</Title>
+            <Title>{category}</Title>
             <FilterContainer>
                 <Filter>
                     <FilterText>Filter Products:</FilterText>

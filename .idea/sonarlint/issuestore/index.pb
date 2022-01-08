@@ -1,6 +1,4 @@
 
-\
-,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 :

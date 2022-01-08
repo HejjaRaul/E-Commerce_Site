@@ -4,6 +4,9 @@ import AnnouncementsIndex from "../ProductsList/Components/AnnouncementsIndex";
 import FooterIndex from "../ProductsList/Components/FooterIndex";
 import NewsletterIndex from "../ProductsList/Components/NewsletterIndex";
 import TopBarIndex from "../ProductsList/Components/TopBarIndex";
+import {useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -120,45 +123,71 @@ const Button = styled.button`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function ProductPageIndex() {
+
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+    const [size, setSize] = useState("");
+    const [color, setColor] = useState("");
+
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+                const res = await axios.get("http://localhost:3000/api/products/find/" + id);
+                setProduct(res.data);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        getProduct();
+    });
+
+    const handleQuantity = (type) => {
+        if (type === "dec") {
+            if (quantity > 1) {
+                setQuantity(quantity - 1);
+            }
+        } else {
+            setQuantity(quantity + 1);
+        }
+    };
+
     return (
         <Container>
             <TopBarIndex/>
             <AnnouncementsIndex/>
             <Wrapper>
                 <ImageContainer>
-                    <Image src="https://static.footshop.com/381706-full_product/80530.jpg"/>
+                    <Image src={product.image}/>
                 </ImageContainer>
                 <InfoContainer>
-                    <Title>Nike T-Shirt</Title>
+                    <Title>{product.title}</Title>
                     <Description>
-                        T-shirt made of soft ecological cotton jersey, with round neckline
-                        and embroidered border, with print on the chest. Straight cut at the
-                        base.
+                        {product.description}
                     </Description>
-                    <Price>20€</Price>
+                    <Price>{product.price}€</Price>
                     <FilterContainer>
                         <Filter>
                             <FilterTitle>Color</FilterTitle>
-                            <FilterColor color="black"/>
-                            <FilterColor color="darkblue"/>
-                            <FilterColor color="gray"/>
+                            {product.color?.map((c) => (
+                                <FilterColor color={c} key={c} onClick={() => setColor(c)}/>
+                            ))}
                         </Filter>
                         <Filter>
                             <FilterTitle>Size</FilterTitle>
-                            <FilterSize>
-                                <FilterSizeOption>XS</FilterSizeOption>
-                                <FilterSizeOption>S</FilterSizeOption>
-                                <FilterSizeOption>M</FilterSizeOption>
-                                <FilterSizeOption>L</FilterSizeOption>
-                                <FilterSizeOption>XL</FilterSizeOption>
+                            <FilterSize onChange={(event) => setSize(event.target.value)}>
+                                {product.size?.map((s) => (
+                                    <FilterSizeOption key={s}>{s}</FilterSizeOption>
+                                ))}
                             </FilterSize>
                         </Filter>
                     </FilterContainer>
                     <AddContainer>
                         <AmountContainer>
-                            <Remove/>
-                            <Amount>1</Amount>
-                            <Add/>
+                            <Remove onClick={() => handleQuantity("dec")}/>
+                            <Amount>{quantity}</Amount>
+                            <Add onClick={() => handleQuantity("inc")}/>
                         </AmountContainer>
                         <Button>ADD TO CART</Button>
                     </AddContainer>
