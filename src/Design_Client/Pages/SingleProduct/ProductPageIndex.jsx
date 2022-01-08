@@ -7,6 +7,8 @@ import TopBarIndex from "../ProductsList/Components/TopBarIndex";
 import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {addProduct} from "../../../Redux/cartRedux";
+import {useDispatch} from "react-redux";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -130,6 +132,7 @@ export default function ProductPageIndex() {
     const [quantity, setQuantity] = useState(1);
     const [size, setSize] = useState("");
     const [color, setColor] = useState("");
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const getProduct = async () => {
@@ -151,6 +154,10 @@ export default function ProductPageIndex() {
         } else {
             setQuantity(quantity + 1);
         }
+    };
+
+    const handleClick = () => {
+        dispatch(addProduct({...product, quantity, color, size}));
     };
 
     return (
@@ -189,7 +196,7 @@ export default function ProductPageIndex() {
                             <Amount>{quantity}</Amount>
                             <Add onClick={() => handleQuantity("inc")}/>
                         </AmountContainer>
-                        <Button>ADD TO CART</Button>
+                        <Button onClick={handleClick}>ADD TO CART</Button>
                     </AddContainer>
                 </InfoContainer>
             </Wrapper>

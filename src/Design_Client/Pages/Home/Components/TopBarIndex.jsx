@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Search, ShoppingCartOutlined } from "@mui/icons-material";
-import { Badge } from "@mui/material";
+import {Search, ShoppingCartOutlined} from "@mui/icons-material";
+import {Badge} from "@mui/material";
+import {useSelector} from "react-redux";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -70,31 +71,34 @@ const MenuItem = styled.div`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function TopBarIndex() {
-  return (
-    <Container>
-      <Wrapper>
-        <Left className="homepage-topBar-wrapper-left">
-          <Languages>EN</Languages>
-          <SearchContainer>
-            <Input />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
-        </Left>
-        <Center>
-          <Logo>Fashion Times</Logo>
-        </Center>
-        <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Log In</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined color="action" />
-            </Badge>
-          </MenuItem>
-        </Right>
-      </Wrapper>
-    </Container>
-  );
+
+    const quantity = useSelector(state => state.cart.quantity);
+
+    return (
+        <Container>
+            <Wrapper>
+                <Left className="homepage-topBar-wrapper-left">
+                    <Languages>EN</Languages>
+                    <SearchContainer>
+                        <Input/>
+                        <Search style={{color: "gray", fontSize: 16}}/>
+                    </SearchContainer>
+                </Left>
+                <Center>
+                    <Logo>Fashion Times</Logo>
+                </Center>
+                <Right>
+                    <MenuItem>Register</MenuItem>
+                    <MenuItem>Log In</MenuItem>
+                    <MenuItem>
+                        <Badge badgeContent={quantity} color="primary">
+                            <ShoppingCartOutlined color="action"/>
+                        </Badge>
+                    </MenuItem>
+                </Right>
+            </Wrapper>
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding---------------------------------------------->
