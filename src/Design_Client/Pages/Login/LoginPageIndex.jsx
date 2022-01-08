@@ -3,12 +3,9 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(https://i.ibb.co/CbtcKtN/photo-1483985988355-763728e1935b-1-1.jpg)
-      center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5),
+  rgba(255, 255, 255, 0.5)),
+  url(https://i.ibb.co/CbtcKtN/photo-1483985988355-763728e1935b-1-1.jpg) center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -55,17 +52,17 @@ const Link = styled.a`
 `;
 
 export default function LoginPageIndex() {
-  return (
-    <Container>
-      <Wrapper>
-        <Title>Log in</Title>
-        <Form>
-          <Input placeholder="email"></Input>
-          <Input placeholder="password"></Input>
-          <Button>Login</Button>
-          <Link>Create a new account</Link>
-        </Form>
-      </Wrapper>
-    </Container>
-  );
+    return (
+        <Container>
+            <Wrapper>
+                <Title>Log in</Title>
+                <Form>
+                    <Input placeholder="email"></Input>
+                    <Input placeholder="password"></Input>
+                    <Button>Login</Button>
+                    <Link>Create a new account</Link>
+                </Form>
+            </Wrapper>
+        </Container>
+    );
 }

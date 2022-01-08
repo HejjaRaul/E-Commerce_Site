@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {
-    ShoppingCartOutlined,
-    FavoriteBorderOutlined,
-    SearchOutlined,
-} from "@mui/icons-material";
+import {FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined,} from "@mui/icons-material";
 import {Link} from "react-router-dom";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>

@@ -19,7 +19,7 @@ const Container = styled.div`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function AnnouncementsIndex() {
-  return <Container>Super Deal! Free Shipping for Orders Over 40€</Container>;
+    return <Container>Super Deal! Free Shipping for Orders Over 40€</Container>;
 }
 
 //<---------------------------------------End of HTML - coding----------------------------------------------->

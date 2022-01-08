@@ -1,12 +1,4 @@
-import {
-    Email,
-    Facebook,
-    Instagram,
-    MapsHomeWork,
-    Phone,
-    Pinterest,
-    Twitter,
-} from "@mui/icons-material";
+import {Email, Facebook, Instagram, MapsHomeWork, Phone, Pinterest, Twitter,} from "@mui/icons-material";
 import styled from "styled-components";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>

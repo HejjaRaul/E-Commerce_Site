@@ -5,12 +5,9 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(https://i.ibb.co/CbtcKtN/photo-1483985988355-763728e1935b-1-1.jpg)
-      center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5),
+  rgba(255, 255, 255, 0.5)),
+  url(https://i.ibb.co/CbtcKtN/photo-1483985988355-763728e1935b-1-1.jpg) center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -59,26 +56,26 @@ const Button = styled.button`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function RegisterPageIndex() {
-  return (
-    <Container>
-      <Wrapper>
-        <Title>Create an account</Title>
-        <Form>
-          <Input placeholder="name"></Input>
-          <Input placeholder="last name"></Input>
-          <Input placeholder="email"></Input>
-          <Input placeholder="username"></Input>
-          <Input placeholder="password"></Input>
-          <Input placeholder="confirm password"></Input>
-          <Agreement>
-            By creating an account, I conset to the proccessing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
-          <Button>Create</Button>
-        </Form>
-      </Wrapper>
-    </Container>
-  );
+    return (
+        <Container>
+            <Wrapper>
+                <Title>Create an account</Title>
+                <Form>
+                    <Input placeholder="name"></Input>
+                    <Input placeholder="last name"></Input>
+                    <Input placeholder="email"></Input>
+                    <Input placeholder="username"></Input>
+                    <Input placeholder="password"></Input>
+                    <Input placeholder="confirm password"></Input>
+                    <Agreement>
+                        By creating an account, I conset to the proccessing of my personal
+                        data in accordance with the <b>PRIVACY POLICY</b>
+                    </Agreement>
+                    <Button>Create</Button>
+                </Form>
+            </Wrapper>
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding----------------------------------------------->

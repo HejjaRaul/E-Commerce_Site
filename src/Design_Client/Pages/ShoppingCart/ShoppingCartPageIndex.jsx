@@ -3,6 +3,8 @@ import AnnouncementsIndex from "./Components/AnnouncementsIndex";
 import TopBarIndex from "./Components/TopBarIndex";
 import {Add, Remove} from "@mui/icons-material";
 import FooterIndex from "./Components/FooterIndex";
+import {useSelector} from "react-redux";
+import * as PropTypes from "prop-types";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -64,7 +66,6 @@ const ProductDetail = styled.div`
 `
 const Image = styled.img`
   width: 200px;
-  height: 300px;
 `
 const Details = styled.div`
   padding: 30px;
@@ -153,12 +154,18 @@ const SummaryButton = styled.button`
   font-weight: 600;
   cursor: pointer;
 `
+const ProductWithLine = styled.div``
 
 //<---------------------------------------End of CSS - styling------------------------------------------------>
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
+
+ProductWithLine.propTypes = {children: PropTypes.node};
 export default function ShoppingCartPageIndex() {
+
+    const cart = useSelector(state => state.cart);
+
     return (
         <Container>
             <TopBarIndex/>
@@ -175,53 +182,37 @@ export default function ShoppingCartPageIndex() {
                 </Top>
                 <Bottom>
                     <Info>
-                        <Product>
-                            <ProductDetail>
-                                <Image
-                                    src="https://i.pinimg.com/originals/35/1c/76/351c76792125bf3dd0820bcf5828e9c0.jpg"/>
-                                <Details>
-                                    <ProductName><b>Product:</b> BLACK JEANS</ProductName>
-                                    <ProductId><b>ID:</b> 9042152</ProductId>
-                                    <ProductColor color="black"/>
-                                    <ProductSize><b>Size:</b> M</ProductSize>
-                                </Details>
-                            </ProductDetail>
-                            <PriceDetail>
-                                <ProductAmountContainer>
-                                    <Remove/>
-                                    <ProductAmount>2</ProductAmount>
-                                    <Add/>
-                                </ProductAmountContainer>
-                                <ProductPrice>30 €</ProductPrice>
-                            </PriceDetail>
-                        </Product>
-                        <Hr/>
-                        <Product>
-                            <ProductDetail>
-                                <Image
-                                    src="https://i.pinimg.com/originals/35/1c/76/351c76792125bf3dd0820bcf5828e9c0.jpg"/>
-                                <Details>
-                                    <ProductName><b>Product:</b> BLACK JEANS</ProductName>
-                                    <ProductId><b>ID:</b> 9042152</ProductId>
-                                    <ProductColor color="black"/>
-                                    <ProductSize><b>Size:</b> M</ProductSize>
-                                </Details>
-                            </ProductDetail>
-                            <PriceDetail>
-                                <ProductAmountContainer>
-                                    <Remove/>
-                                    <ProductAmount>2</ProductAmount>
-                                    <Add/>
-                                </ProductAmountContainer>
-                                <ProductPrice>30 €</ProductPrice>
-                            </PriceDetail>
-                        </Product>
+                        {cart.products.map(product => (
+                            <ProductWithLine>
+                                <Product>
+                                    <ProductDetail>
+                                        <Image src={product.image}/>
+                                        <Details>
+                                            <ProductName><b>Product:</b> {product.title}</ProductName>
+                                            <ProductId><b>ID:</b> {product._id}</ProductId>
+                                            <ProductColor color={product.color}/>
+                                            <ProductSize><b>Size:</b> {product.size}</ProductSize>
+                                        </Details>
+                                    </ProductDetail>
+                                    <PriceDetail>
+                                        <ProductAmountContainer>
+                                            <Remove/>
+                                            <ProductAmount>{product.quantity}</ProductAmount>
+                                            <Add/>
+                                        </ProductAmountContainer>
+                                        <ProductPrice>{product.price * product.quantity} €</ProductPrice>
+                                    </PriceDetail>
+                                </Product>
+                                <Hr/>
+                            </ProductWithLine>
+                        ))}
+
                     </Info>
                     <Summary>
                         <SummaryTitle>ORDER SUMMARY</SummaryTitle>
                         <SummaryItem>
                             <SummaryItemText>Subtotal</SummaryItemText>
-                            <SummaryItemPrice>60 €</SummaryItemPrice>
+                            <SummaryItemPrice>{cart.total} €</SummaryItemPrice>
                         </SummaryItem>
                         <SummaryItem>
                             <SummaryItemText>Shipping Cost</SummaryItemText>
@@ -230,7 +221,7 @@ export default function ShoppingCartPageIndex() {
                         <SummaryHr/>
                         <SummaryItem type="total">
                             <SummaryItemText>Total</SummaryItemText>
-                            <SummaryItemPrice>65 €</SummaryItemPrice>
+                            <SummaryItemPrice>{cart.total + 5} €</SummaryItemPrice>
                         </SummaryItem>
                         <SummaryButton>CHECKOUT NOW</SummaryButton>
                     </Summary>

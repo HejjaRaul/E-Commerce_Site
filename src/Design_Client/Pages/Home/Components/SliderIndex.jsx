@@ -1,7 +1,7 @@
-import { ArrowLeft, ArrowRight } from "@mui/icons-material";
-import React, { useState } from "react";
+import {ArrowLeft, ArrowRight} from "@mui/icons-material";
+import React, {useState} from "react";
 import styled from "styled-components";
-import { sliderItems } from "./SliderData";
+import {sliderItems} from "./SliderData";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -30,6 +30,7 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   z-index: 2;
+
   &:hover {
     background-color: antiquewhite;
   }
@@ -82,6 +83,7 @@ const Button = styled.button`
   font-size: 20px;
   background-color: transparent;
   cursor: pointer;
+
   &:hover {
     background-color: salmon;
   }
@@ -92,38 +94,38 @@ const Button = styled.button`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function Slider() {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const handleClick = (direction) => {
-    if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
-    } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
-    }
-  };
-  return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeft />
-      </Arrow>
-      <Wrapper slideIndex={slideIndex}>
-        {sliderItems.map((item) => (
-          <Slide bg={item.backgroundColor} key={item.id}>
-            <ImagineContainer>
-              <Image src={item.image} />
-            </ImagineContainer>
-            <InfoContainer>
-              <Title>{item.title}</Title>
-              <Description>{item.description}</Description>
-              <Button>Show Now</Button>
-            </InfoContainer>
-          </Slide>
-        ))}
-      </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
-        <ArrowRight />
-      </Arrow>
-    </Container>
-  );
+    const [slideIndex, setSlideIndex] = useState(0);
+    const handleClick = (direction) => {
+        if (direction === "left") {
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+        }
+    };
+    return (
+        <Container>
+            <Arrow direction="left" onClick={() => handleClick("left")}>
+                <ArrowLeft/>
+            </Arrow>
+            <Wrapper slideIndex={slideIndex}>
+                {sliderItems.map((item) => (
+                    <Slide bg={item.backgroundColor} key={item.id}>
+                        <ImagineContainer>
+                            <Image src={item.image}/>
+                        </ImagineContainer>
+                        <InfoContainer>
+                            <Title>{item.title}</Title>
+                            <Description>{item.description}</Description>
+                            <Button>Show Now</Button>
+                        </InfoContainer>
+                    </Slide>
+                ))}
+            </Wrapper>
+            <Arrow direction="right" onClick={() => handleClick("right")}>
+                <ArrowRight/>
+            </Arrow>
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding---------------------------------------------->

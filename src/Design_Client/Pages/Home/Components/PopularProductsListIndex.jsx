@@ -18,27 +18,27 @@ const Container = styled.div`
 
 export default function ProductsListIndex() {
 
-  const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const res = await axios.get("http://localhost:3000/api/products");
-        setProducts(res.data);
-      } catch (err) {
+    useEffect(() => {
+        const getProducts = async () => {
+            try {
+                const res = await axios.get("http://localhost:3000/api/products");
+                setProducts(res.data);
+            } catch (err) {
 
-      }
-    };
-    getProducts();
-  });
+            }
+        };
+        getProducts();
+    });
 
-  return (
-    <Container>
-      {products.slice(0,8).map((item) => (
-        <PopularProductItemIndex item={item} key={item.id} />
-      ))}
-    </Container>
-  );
+    return (
+        <Container>
+            {products.slice(0, 8).map((item) => (
+                <PopularProductItemIndex item={item} key={item.id}/>
+            ))}
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding---------------------------------------------->

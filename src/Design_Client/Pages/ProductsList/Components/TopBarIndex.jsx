@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Search, ShoppingCartOutlined} from "@mui/icons-material";
 import {Badge} from "@mui/material";
 import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -90,11 +91,13 @@ export default function TopBarIndex() {
                 <Right>
                     <MenuItem>Register</MenuItem>
                     <MenuItem>Log In</MenuItem>
-                    <MenuItem>
-                        <Badge badgeContent={quantity} color="primary">
-                            <ShoppingCartOutlined color="action"/>
-                        </Badge>
-                    </MenuItem>
+                    <Link to={"/cart"}>
+                        <MenuItem>
+                            <Badge badgeContent={quantity} color="primary">
+                                <ShoppingCartOutlined color="action"/>
+                            </Badge>
+                        </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>
         </Container>

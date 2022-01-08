@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import {
-  ShoppingCartOutlined,
-  FavoriteBorderOutlined,
-  SearchOutlined,
-} from "@mui/icons-material";
+import {FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined,} from "@mui/icons-material";
+import {Link} from "react-router-dom";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -31,6 +28,7 @@ const Container = styled.div`
   justify-content: center;
   background-color: rgba(204, 236, 239);
   position: relative;
+
   &:hover ${Info} {
     opacity: 1;
   }
@@ -51,10 +49,12 @@ const Icon = styled.div`
   justify-content: center;
   margin: 10px;
   transition: all 0.5s ease;
+
   &:hover {
     background-color: antiquewhite;
     transform: scale(1.2);
   }
+
   cursor: pointer;
 `;
 
@@ -62,23 +62,25 @@ const Icon = styled.div`
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function PopularProductItemIndex({ item }) {
-  return (
-    <Container>
-      <Image src={item.image} />
-      <Info>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
-          <SearchOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
-        </Icon>
-      </Info>
-    </Container>
-  );
+export default function PopularProductItemIndex({item}) {
+    return (
+        <Container>
+            <Image src={item.image}/>
+            <Info>
+                <Icon>
+                    <ShoppingCartOutlined/>
+                </Icon>
+                <Icon>
+                    <Link to={`/product/${item._id}`}>
+                        <SearchOutlined/>
+                    </Link>
+                </Icon>
+                <Icon>
+                    <FavoriteBorderOutlined/>
+                </Icon>
+            </Info>
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding---------------------------------------------->

@@ -4,12 +4,7 @@ import ProductsListPageIndex from "./Pages/ProductsList/ProductsListPageIndex";
 import RegisterPageIndex from "./Pages/Register/RegisterPageIndex";
 import ShoppingCartPageIndex from "./Pages/ShoppingCart/ShoppingCartPageIndex";
 import ProductPageIndex from "./Pages/SingleProduct/ProductPageIndex";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect
-} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 function App() {
     const user = true;

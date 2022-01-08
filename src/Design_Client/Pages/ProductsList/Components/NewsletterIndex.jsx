@@ -1,4 +1,4 @@
-import { Send } from "@mui/icons-material";
+import {Send} from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 
@@ -52,18 +52,18 @@ const Button = styled.button`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function NewsletterIndex() {
-  return (
-    <Container>
-      <Title>Newsletter</Title>
-      <Description>Get timely updates for your favorite products</Description>
-      <InputContainer>
-        <Input placeholder="Your email" />
-        <Button>
-          <Send />
-        </Button>
-      </InputContainer>
-    </Container>
-  );
+    return (
+        <Container>
+            <Title>Newsletter</Title>
+            <Description>Get timely updates for your favorite products</Description>
+            <InputContainer>
+                <Input placeholder="Your email"/>
+                <Button>
+                    <Send/>
+                </Button>
+            </InputContainer>
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding----------------------------------------------->

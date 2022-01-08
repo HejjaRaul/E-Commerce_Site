@@ -49,7 +49,7 @@ export default function ProductsListIndex({category, filters, sort}) {
             setFilteredProducts(prev =>
                 [...prev].sort((a, b) => a.createdAt - b.createdAt)
             );
-        } else if(sort==="PriceASC") {
+        } else if (sort === "PriceASC") {
             setFilteredProducts(prev =>
                 [...prev].sort((a, b) => a.price - b.price)
             );

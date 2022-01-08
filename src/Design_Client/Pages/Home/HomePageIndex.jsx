@@ -7,15 +7,15 @@ import NewsletterIndex from "./Components/NewsletterIndex";
 import FooterIndex from "./Components/FooterIndex";
 
 export default function HomePageIndex() {
-  return (
-    <div>
-      <TopBarIndex />
-      <AnnouncementsIndex />
-      <SliderIndex />
-      <CategoriesIndex />
-      <PopularProductsListIndex />
-      <NewsletterIndex />
-      <FooterIndex />
-    </div>
-  );
+    return (
+        <div>
+            <TopBarIndex/>
+            <AnnouncementsIndex/>
+            <SliderIndex/>
+            <CategoriesIndex/>
+            <PopularProductsListIndex/>
+            <NewsletterIndex/>
+            <FooterIndex/>
+        </div>
+    );
 }
