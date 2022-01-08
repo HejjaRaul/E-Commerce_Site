@@ -28,41 +28,41 @@ const Option = styled.option``;
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function FilterIndex() {
-  return (
-    <FilterContainer>
-      <Filter>
-        <FilterText>Filter Products:</FilterText>
-        <Select>
-          <Option disabled selected>
-            Color
-          </Option>
-          <Option>White</Option>
-          <Option>Black</Option>
-          <Option>Red</Option>
-          <Option>Blue</Option>
-          <Option>Green</Option>
-        </Select>
-        <Select>
-          <Option disabled selected>
-            Size
-          </Option>
-          <Option>XS</Option>
-          <Option>S</Option>
-          <Option>M</Option>
-          <Option>L</Option>
-          <Option>XL</Option>
-        </Select>
-      </Filter>
-      <Filter>
-        <FilterText>Sort Products:</FilterText>
-        <Select>
-          <Option selected>Newest</Option>
-          <Option>Price ascending</Option>
-          <Option>Price descending</Option>
-        </Select>
-      </Filter>
-    </FilterContainer>
-  );
+    return (
+        <FilterContainer>
+            <Filter>
+                <FilterText>Filter Products:</FilterText>
+                <Select>
+                    <Option disabled>
+                        Color
+                    </Option>
+                    <Option>White</Option>
+                    <Option>Black</Option>
+                    <Option>Red</Option>
+                    <Option>Blue</Option>
+                    <Option>Green</Option>
+                </Select>
+                <Select>
+                    <Option disabled>
+                        Size
+                    </Option>
+                    <Option>XS</Option>
+                    <Option>S</Option>
+                    <Option>M</Option>
+                    <Option>L</Option>
+                    <Option>XL</Option>
+                </Select>
+            </Filter>
+            <Filter>
+                <FilterText>Sort Products:</FilterText>
+                <Select>
+                    <Option value={"Newest"}>Newest</Option>
+                    <Option value={"PriceASC"}>Price ascending</Option>
+                    <Option value={"PriceDESC"}>Price descending</Option>
+                </Select>
+            </Filter>
+        </FilterContainer>
+    );
 }
 
 //<---------------------------------------End of HTML - coding----------------------------------------------->

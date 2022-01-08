@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PopularProductItemIndex from "./PopularProductItemIndex";
-import { popularProducts } from "./PopularProductsListData";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -16,9 +17,24 @@ const Container = styled.div`
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 export default function ProductsListIndex() {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/api/products");
+        setProducts(res.data);
+      } catch (err) {
+
+      }
+    };
+    getProducts();
+  });
+
   return (
     <Container>
-      {popularProducts.map((item) => (
+      {products.slice(0,8).map((item) => (
         <PopularProductItemIndex item={item} key={item.id} />
       ))}
     </Container>

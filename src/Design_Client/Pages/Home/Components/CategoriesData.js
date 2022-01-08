@@ -4,7 +4,7 @@ export const categories = [
     image:
       "https://contents.mediadecathlon.com/p1484240/k$ab565f3675dbdd7e3c486175e2c16583/travel-100-men-s-trekking-shirt-maroon.jpg?&f=800x800",
     title: "SHIRTS",
-    category: "women",
+    category: "female",
   },
   {
     id: 2,
