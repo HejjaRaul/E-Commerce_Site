@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -35,6 +36,7 @@ const Button = styled.button`
   color: gray;
   font-weight: 600;
   cursor: pointer;
+
   &:hover {
     background-color: antiquewhite;
   }
@@ -44,16 +46,18 @@ const Button = styled.button`
 
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
-export default function CategoryItem({ item }) {
-  return (
-    <Container>
-      <Image src={item.image} />
-      <Info>
-        <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
-      </Info>
-    </Container>
-  );
+export default function CategoryItem({item}) {
+    return (
+        <Container>
+            <Link to={`/products/${item.category}`}>
+                <Image src={item.image}/>
+                <Info>
+                    <Title>{item.title}</Title>
+                    <Button>SHOP NOW</Button>
+                </Info>
+            </Link>
+        </Container>
+    );
 }
 
 //<---------------------------------------End of HTML - coding---------------------------------------------->
