@@ -4,7 +4,12 @@ import TopBarIndex from "./Components/TopBarIndex";
 import {Add, Remove} from "@mui/icons-material";
 import FooterIndex from "./Components/FooterIndex";
 import {useSelector} from "react-redux";
-import * as PropTypes from "prop-types";
+import StripeCheckout from "react-stripe-checkout";
+import {useEffect, useState} from "react";
+import {userRequest} from "../../../requestMethods";
+import {useHistory} from "react-router-dom";
+
+const KEY = "pk_test_51KFzPXCv63UO9T4zHC6vdubc2pGeHBQRhSogpmFk5b0m0KDQjRhF754grli1m6c8SmuojxwSfv2flThBG2n2uDPT00Mge2lDm8";
 
 //<---------------------------------------Start of CSS - styling------------------------------------------------>
 
@@ -161,10 +166,32 @@ const ProductWithLine = styled.div``
 //<---------------------------------------Start of HTML - coding---------------------------------------------->
 
 
-ProductWithLine.propTypes = {children: PropTypes.node};
 export default function ShoppingCartPageIndex() {
 
     const cart = useSelector(state => state.cart);
+    const [stripeToken, setStripeToken] = useState(null);
+    const history = useHistory();
+
+    const onToken = (token) => {
+        setStripeToken(token);
+    };
+
+    useEffect(() => {
+        const makeRequest = async () => {
+            try {
+                const res = await userRequest.post("http://localhost:3000/api/checkout/payment", {
+                    tokenId: stripeToken.id,
+                    amount: (cart.total + 5) * 100,
+                });
+                history.push("/success", {data: res.data});
+            } catch (err) {
+
+            }
+        };
+        if (stripeToken && cart.total >= 1) {
+            makeRequest();
+        }
+    }, [stripeToken, cart.total, history]);
 
     return (
         <Container>
@@ -223,7 +250,17 @@ export default function ShoppingCartPageIndex() {
                             <SummaryItemText>Total</SummaryItemText>
                             <SummaryItemPrice>{cart.total + 5} €</SummaryItemPrice>
                         </SummaryItem>
-                        <SummaryButton>CHECKOUT NOW</SummaryButton>
+                        <StripeCheckout
+                            name={"Fashion Times"}
+                            billingAddress
+                            shippingAddress
+                            description={`Your total is ${cart.total + 5} €`}
+                            amount={(cart.total + 5) * 100}
+                            token={onToken}
+                            stripeKey={KEY}
+                        >
+                            <SummaryButton>CHECKOUT NOW</SummaryButton>
+                        </StripeCheckout>
                     </Summary>
                 </Bottom>
             </Wrapper>

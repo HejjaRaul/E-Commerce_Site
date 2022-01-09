@@ -5,6 +5,7 @@ import RegisterPageIndex from "./Pages/Register/RegisterPageIndex";
 import ShoppingCartPageIndex from "./Pages/ShoppingCart/ShoppingCartPageIndex";
 import ProductPageIndex from "./Pages/SingleProduct/ProductPageIndex";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import SuccessIndex from "./Pages/ShoppingCart/Components/Success";
 
 function App() {
     const user = true;
@@ -22,6 +23,9 @@ function App() {
                 </Route>
                 <Route path="/cart">
                     <ShoppingCartPageIndex/>
+                </Route>
+                <Route path="/success">
+                    <SuccessIndex/>
                 </Route>
                 <Route path="/login">
                     {user ? <Redirect to="/"/> : <LoginPageIndex/>}
